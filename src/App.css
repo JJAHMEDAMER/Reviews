@@ -1,4 +1,7 @@
-:root {}
+:root {
+    --blue: #2196F3;
+    --blue-light: #21b8f328;
+}
 
 *,
 *::before,
@@ -8,13 +11,13 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Karla";
     height: 100vh;
 }
 
-.app{
-    width:100%;
+.app {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -23,13 +26,13 @@ body{
     padding: 3rem;
 }
 
-.underline{
+.underline {
     width: 11rem;
     height: 0.2rem;
-    background-color: blue;
+    background-color: var(--blue);
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,24 +44,56 @@ body{
     box-shadow: 0 3px 10px -5px;
 }
 
-.card--image--photo{
+.card--image--photo {
     height: 9.5rem;
     width: 9.5rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.card--name{
+.card--name {
     margin-top: 1.6rem;
     margin-bottom: 0.8rem;
 
 }
 
-.card--job{
-    color: blue;
+.card--job {
+    color: var(--blue);
     margin-bottom: 1.6rem;
 
 }
-.card--text{
+
+.card--text {
     text-align: center;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav--scroll--button {
+    background-color: inherit;
+    border-width: 0;
+
+}
+
+.nav--scroll--button--img {
+    width: 40px;
+}
+
+.nav--surprise {
+    margin-top: 5px;
+    padding: 5px 20px;
+    color: var(--blue);
+    background-color: var(--blue-light);
+    border-color: var(--blue);
+    border-style: solid;
+    border-radius: 4px;
 }

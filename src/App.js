@@ -5,6 +5,7 @@ import reviews from "./data"
 
 // Comp
 import Card from "./comp/card"
+import NavSection from "./comp/navSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <h1 className="app-title">Reviews</h1>
       <div className="underline"></div>
       <Card {...reviews[0]}/>
+      <NavSection/>
     </div>
   );
 }
