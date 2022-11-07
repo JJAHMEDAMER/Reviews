@@ -29,8 +29,12 @@ function App() {
     });
   }
 
-  function random(){
-    setIndex(Math.floor(Math.random() * (reviews.length - 0) ) + 0)
+  function random() {
+    let newIndex = 0;
+    do {
+      newIndex = Math.floor(Math.random() * (reviews.length - 0)) + 0;
+    } while (newIndex === index);
+    setIndex(newIndex);
   }
 
   return (
@@ -38,7 +42,11 @@ function App() {
       <h1 className="app-title">Reviews</h1>
       <div className="underline"></div>
       <Card {...reviews[index]} />
-      <NavSection nextHandle={next} previousHandle={previous} randomHandle={random} />
+      <NavSection
+        nextHandle={next}
+        previousHandle={previous}
+        randomHandle={random}
+      />
     </div>
   );
 }
