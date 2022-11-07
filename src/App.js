@@ -8,8 +8,9 @@ import Card from "./comp/card"
 
 function App() {
   return (
-    <div>
-      <h1>App Hello World</h1>
+    <div className="app">
+      <h1 className="app-title">Reviews</h1>
+      <div className="underline"></div>
       <Card {...reviews[0]}/>
     </div>
   );
