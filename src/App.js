@@ -29,12 +29,16 @@ function App() {
     });
   }
 
+  function random(){
+    setIndex(Math.floor(Math.random() * (reviews.length - 0) ) + 0)
+  }
+
   return (
     <div className="app">
       <h1 className="app-title">Reviews</h1>
       <div className="underline"></div>
       <Card {...reviews[index]} />
-      <NavSection nextHandle={next} previousHandle={previous} />
+      <NavSection nextHandle={next} previousHandle={previous} randomHandle={random} />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 // Assets
 import icon from "../assets/next.png";
 
-const NavSection = ({nextHandle, previousHandle}) => {
+const NavSection = ({nextHandle, previousHandle, randomHandle}) => {
   return (
     <div className="nav">
       <div className="nav--scroll">
@@ -14,7 +14,7 @@ const NavSection = ({nextHandle, previousHandle}) => {
           <img className="nav--scroll--button--img" src={icon} alt="next" />
         </button>
       </div>
-      <button className="nav--surprise" onClick={nextHandle}>Surprise Me!!</button>
+      <button className="nav--surprise" onClick={randomHandle}>Surprise Me!!</button>
     </div>
   );
 };
